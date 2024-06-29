@@ -3,15 +3,6 @@ function url(){
 }
 
 
-document.addEventListener('DOMContentLoaded', function () {
-    var navToggle = document.querySelector('#nav-toggle');
-    var navMenu = document.querySelector('.nav');
-
-    navToggle.addEventListener('click', function () {
-        navMenu.classList.toggle('show');
-    });
-});
-
 document.getElementsByClassName('header')[0].innerHTML = `
      <div class="bg-[#fff] shadow-lg border-b border-black ">
         <div class="max-w-6xl mx-auto px-4 py-5 ">
@@ -20,9 +11,9 @@ document.getElementsByClassName('header')[0].innerHTML = `
                     <a href="index.html" class="logo">
                         <img src="./image/logo/8xbet_light-logo.png" alt="logo">
                     </a>
-                    <div class="nav">
-                        <ul
-                            class="absolute *:list-none hidden md:relative md:flex flex-wrap gap-6 left-0 md:top-0 top-16 bg-slate-800 md:bg-transparent w-full md:w-auto md:text-black text-white text-center py-4 *:py-2">
+                    <div >
+                        <ul id="nav"
+                            class="absolute *:list-none hidden md:relative md:flex flex-wrap gap-6 left-0 md:top-0 top-16 bg-slate-500 md:bg-transparent w-full md:w-auto md:text-black text-white text-center py-4 *:py-2">
                             <li><a href="xo-so.html"
                                     class="hover:text-[#007BFF] hover:border-b-2 hover:border-[#007BFF] ease-in-out duration-500">Xổ
                                     Số</a></li>
@@ -46,8 +37,8 @@ document.getElementsByClassName('header')[0].innerHTML = `
                     <button onclick="url()" type="button" class="">Đăng Nhập</button>
                 </div>
                 <div
-                id="nav-toggle" class="md:hidden menu text-3xl w-10 h-8 text-center rounded-md shadow-sm shadow-slate-950 bg-[#134074] text-white">
-                    <ion-icon  name="menu-outline"></ion-icon>
+                     class="md:hidden menu text-3xl w-10 h-8 text-center rounded-md shadow-sm shadow-slate-950 bg-[#134074] text-white">
+                        <ion-icon onclick="OpenMenu()" name="menu-outline"></ion-icon>
                 </div>
             </div>
             <div
@@ -123,3 +114,12 @@ document.getElementsByClassName('right-content')[0].innerHTML = `
                             </a>
                         </div>
 `
+
+var navbar = document.getElementById('nav');
+function OpenMenu() {
+    navbar.classList.toggle('hidden')
+    console.log("hurhg")
+    if (!navbar.classList.contains('hidden')) {
+        navbar.scrollIntoView({ behavior: 'smooth' })
+    }
+}
