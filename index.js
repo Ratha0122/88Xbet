@@ -72,7 +72,7 @@ document.getElementsByClassName('footer')[0].innerHTML = `
             </div>
         </div>
         <div class="text-center pt-2 pb-4">
-            <p>2024 Copyright © 88Xbet. All Rights Reserved.</p>
+            <p>2024 Copyright © 88Xbet.net All Rights Reserved.</p>
         </div>
     </footer>
 `
