@@ -1,0 +1,53 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+
+
+body {
+    font-family: "Roboto", sans-serif;
+}
+
+.txt h1 {
+    font-weight: 500;
+    font-size: 1.8rem;
+    text-align: center;
+}
+.txt h2{
+    font-weight: 500;
+    font-size: 1.6rem;
+    color: #000000;
+}
+.txt h3{
+    font-weight: 500;
+    font-size: 1.3rem;
+    color: #01000a;
+}
+.txt p{
+    color: #615959;
+}
+figcaption{
+    text-align: center;
+}
+.txt ul{
+    padding-left: 30px;
+}
+.txt ul li{
+    list-style: disc;
+    padding-top: 10px;
+}
+
+@media screen and (max-width:480px) {
+    .txt h1 {
+        font-weight: 500;
+        font-size: 1.7rem;
+        text-align: center;
+    }
+    .txt h2{
+        font-weight: 500;
+        font-size: 1.4rem;
+        color: #000000;
+    }
+    .txt h3{
+        font-weight: 500;
+        font-size: 1.1rem;
+        color: #01000a;
+    }
+}
