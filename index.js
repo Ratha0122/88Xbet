@@ -38,7 +38,7 @@ document.getElementsByClassName('header')[0].innerHTML = `
                 </div>
                 <div
                      class="md:hidden menu text-3xl w-10 h-8 text-center rounded-md shadow-sm shadow-slate-950 bg-[#134074] text-white">
-                        <ion-icon onclick="OpenMenu()" name="menu-outline"></ion-icon>
+                        <ion-icon id="nav-icon" onclick="OpenMenu()" name="menu-outline"></ion-icon>
                 </div>
             </div>
             <div
@@ -116,10 +116,15 @@ document.getElementsByClassName('right-content')[0].innerHTML = `
 `
 
 var navbar = document.getElementById('nav');
+var navIcon = document.getElementById('nav-icon'); 
+
 function OpenMenu() {
-    navbar.classList.toggle('hidden')
-    console.log("hurhg")
-    if (!navbar.classList.contains('hidden')) {
-        navbar.scrollIntoView({ behavior: 'smooth' })
+    navbar.classList.toggle('hidden');
+    
+    if (navbar.classList.contains('hidden')) {
+        navIcon.setAttribute('name', 'menu-outline');
+    } else {
+        navIcon.setAttribute('name', 'close-outline');
+        navbar.scrollIntoView({ behavior: 'smooth' });
     }
 }
