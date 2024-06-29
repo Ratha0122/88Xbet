@@ -140,3 +140,20 @@ function makeHeaderSticky() {
         header.classList.remove("sticky");
     }
 }
+
+document.addEventListener('DOMContentLoaded', function() {
+    setActiveLink();
+});
+
+function setActiveLink() {
+    const links = document.querySelectorAll('#nav a');
+    const currentUrl = window.location.href;
+
+    links.forEach(function(link) {
+        if (link.href === currentUrl) {
+            link.classList.add('active');
+        } else {
+            link.classList.remove('active');
+        }
+    });
+}
