@@ -13,7 +13,7 @@ document.getElementsByClassName('header')[0].innerHTML = `
                     </a>
                     <div >
                         <ul id="nav"
-                            class="absolute *:list-none hidden md:relative md:flex flex-wrap gap-6 left-0 md:top-0 top-16 bg-slate-500 md:bg-transparent w-full md:w-auto md:text-black text-white text-center py-4 *:py-2">
+                            class=" fixed *:list-none hidden md:relative md:flex flex-wrap gap-6 left-0 md:top-0 top-16 bg-slate-500 md:bg-transparent w-full md:w-auto md:text-black text-white text-center py-4 *:py-2">
                             <li><a href="xo-so.html"
                                     class="hover:text-[#007BFF] hover:border-b-2 hover:border-[#007BFF] ease-in-out duration-500">Xổ
                                     Số</a></li>
@@ -79,40 +79,42 @@ document.getElementsByClassName('footer')[0].innerHTML = `
 
 document.getElementsByClassName('right-content')[0].innerHTML = `
     <div class="shadow-lg shadow-[#3f373733]">
-                            <a href="cach-doc-keo-tai-xiu.html" class="" >
-                                <img src="./image/index/index-2.png" alt="">
-                                <div class="py-4">
-                                    <h3 class="py-3 px-2">Cách đọc kèo tài xỉu 1 1/4 chuẩn cho người mới</h3>
-                                    <p class="py-3 px-2">Tháng Năm 20, 2024 /// Không có bình luận</p>
-                                    <a href="" class=" text-[#2ab91d] py-3 px-2 font-bold hover:text-[#307929] duration-500">Read More »	</a><br>
-                                </div>
-                            </a>
-                        </div>
-
-                        <div class="shadow-lg shadow-[#3f373733]">
-                            <a href="cach-doc-keo-tai-xiu-2-5.html" class="" >
-                                <img src="./image/index/index-3.png" alt="">
-                                <div class="py-4">
-                                    <h3 class="py-3 px-2">
-                                        Cách đọc kèo tài xỉu 2.5 chuẩn xác nhất		</h3>
-                                    <p class="py-3 px-2">Tháng Năm 20, 2024 /// Không có bình luận</p>
-                                    <a href="" class=" text-[#2ab91d] py-3 px-2 font-bold hover:text-[#307929] duration-500">Read More »	</a><br>
-                                </div>
-                            </a>
-                        </div>
+        <a href="cach-doc-keo-tai-xiu.html" class="" >
+            <img src="./image/index/index-2.png" alt="">
+            <div class="py-4">
+                <h3 class="py-3 px-2">Cách đọc kèo tài xỉu 1 1/4 chuẩn cho người mới</h3>
+                <p class="py-3 px-2">Tháng Năm 20, 2024 /// Không có bình luận</p>
+                <a href="" class=" text-[#2ab91d] py-3 px-2 font-bold hover:text-[#307929] duration-500">Read More »	</a><br>
+            </div>
+        </a>
+    </div>
 
 
-                        <div class="shadow-lg shadow-[#3f373733]">
-                            <a href="tai-xiu.html" class="" >
-                                <img src="./image/index/index-4.png" alt="">
-                                <div class="py-4">
-                                    <h3 class="py-3 px-2">
-                                        Tài xỉu 2 1/4 – Kinh nghiệm bắt chuẩn như chuyên gia </h3>
-                                    <p class="py-3 px-2">Tháng Năm 20, 2024 /// Không có bình luận</p>
-                                    <a href="" class=" text-[#2ab91d] py-3 px-2 font-bold hover:text-[#307929] duration-500">Read More »	</a><br>
-                                </div>
-                            </a>
-                        </div>
+    <div class="shadow-lg shadow-[#3f373733]">
+        <a href="cach-doc-keo-tai-xiu-2-5.html" class="" >
+            <img src="./image/index/index-3.png" alt="">
+            <div class="py-4">
+                <h3 class="py-3 px-2">
+                    Cách đọc kèo tài xỉu 2.5 chuẩn xác nhất		</h3>
+                <p class="py-3 px-2">Tháng Năm 20, 2024 /// Không có bình luận</p>
+                <a href="" class=" text-[#2ab91d] py-3 px-2 font-bold hover:text-[#307929] duration-500">Read More »	</a><br>
+            </div>
+        </a>
+    </div>
+
+
+    <div class="shadow-lg shadow-[#3f373733]">
+        <a href="tai-xiu.html" class="" >
+            <img src="./image/index/index-4.png" alt="">
+            <div class="py-4">
+                <h3 class="py-3 px-2">
+                    Tài xỉu 2 1/4 – Kinh nghiệm bắt chuẩn như chuyên gia </h3>
+                <p class="py-3 px-2">Tháng Năm 20, 2024 /// Không có bình luận</p>
+                <a href="" class=" text-[#2ab91d] py-3 px-2 font-bold hover:text-[#307929] duration-500">Read More »	</a><br>
+            </div>
+        </a>
+    </div>
+
 `
 
 var navbar = document.getElementById('nav');
@@ -128,6 +130,8 @@ function OpenMenu() {
         navbar.scrollIntoView({ behavior: 'smooth' });
     }
 }
+
+
 window.onscroll = function() {makeHeaderSticky()};
 
 var header = document.querySelector(".header");
